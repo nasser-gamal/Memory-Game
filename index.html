@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="button">
+        <span>Start Game</span>
+    </div>
+    <div class="game-over">
+        <div>You Lose</div>
+        <span>Play Again</span>
+    </div>
+    <div class="winner">
+        <div>You Win</div>
+        <span>Play Again</span>
+    </div>
+    <div class="content-container">
+        <div class="text">
+            Hello : <span></span>
+        </div>
+        <span class="timer">Time : <span>50</span></span>
+        <div class="tries">
+            Wrongs : <span>0</span>
+        </div>
+    </div>
+<div class="boxes">
+    <div class="box" data-name="one">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/217473908_6125775190798281_818494624479410777_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="one">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/217473908_6125775190798281_818494624479410777_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="two">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/217393818_2940085132871372_1319373959784358326_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="two">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/217393818_2940085132871372_1319373959784358326_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="three">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/217663985_6125773307465136_8168005134675058448_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="three">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/217663985_6125773307465136_8168005134675058448_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="four">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218088586_6125772687465198_6425833803250130790_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="four">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218088586_6125772687465198_6425833803250130790_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="five">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218653108_186493490161193_3162331732652863833_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="five">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218653108_186493490161193_3162331732652863833_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="six">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218688839_1276320562796172_6981514522334160137_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="six">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218688839_1276320562796172_6981514522334160137_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="seven">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218843589_6125773087465158_460496812451581868_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="seven">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/218843589_6125773087465158_460496812451581868_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="eight">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/219512169_6127007754008358_4408754303347760273_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="eight">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/219512169_6127007754008358_4408754303347760273_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="nine">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/221161742_6155367614505705_7607770725226854110_n.jpg" alt="">
+        </div>
+    </div>
+    <div class="box" data-name="nine">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/221161742_6155367614505705_7607770725226854110_n.jpg"  alt="">
+        </div>
+    </div>
+    <div class="box" data-name="ten">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/221408657_6155362467839553_8460064180005507116_n.jpg"  alt="">
+        </div>
+    </div>
+    <div class="box" data-name="ten">
+        <div class="front"></div>
+        <div class="back">
+            <img src="/img/221408657_6155362467839553_8460064180005507116_n.jpg" alt="">
+        </div>
+    </div>
+    </div>
+        <audio src="audio/true.mp3" id="true" preload="auto"></audio>
+        <audio src="audio/end.mp3" id="end" preload="auto"></audio>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

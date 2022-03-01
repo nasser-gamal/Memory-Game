@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+.container {
+    width: 750px;
+}
+.button,
+.game-over,
+.winner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #615c5ca8;
+}
+.game-over,
+.winner {
+    display: none;
+}
+.button span,
+.game-over span,
+.winner span {
+    display: block;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.button span {
+    background-color: #03a9f4;
+}
+.game-over span,
+.winner span {
+    background-color: red;
+}
+.game-over div,
+.winner div {
+    width: fit-content;
+    font-size: 100px;
+    color:white;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.count {
+    animation-name: timer;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    font-weight: bold;
+}
+@keyframes timer {
+   from {
+        color: red;
+    }
+    to {
+        color: white;
+    }
+}
+.content-container {
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px auto 0;
+    border: 2px solid #03a9f4;
+    border-radius: 5px;
+}
+.boxes {
+    width: 750px;
+    margin: 20px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px,1fr));
+    gap: 10px;
+}
+.boxes.no-click {
+    pointer-events: none;
+}
+.box {
+    width: 140px;
+    height: 130px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.3s;
+}
+.front {
+    background-color: #333;
+}
+.front::before {
+    content: "!";
+    color: white;
+    font-size: 90px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.back {
+    transform: rotatey(180deg);
+}
+.front,
+.back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border: 2px solid #03a9f4;
+    border-radius: 5px;
+    cursor: pointer;
+}
+img {
+    width: 135px;
+    height: 125px;
+    border-radius: 5px;
+}
+.box.is-flipped,
+.box.match {
+    -moz-transform: rotatey(180deg);
+    -o-transform: rotatey(180deg);
+    transform: rotatey(180deg);
+}
